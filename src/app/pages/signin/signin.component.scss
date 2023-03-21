@@ -1,8 +1,40 @@
-form {
+main {
     display: flex;
     justify-content: center;
     align-items: center;
     flex-direction: column;
 
     height: 100vh;
+
+}
+
+form {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+
+    button, mat-form-field {
+        width: 100%;
+        width: -moz-available;          /* WebKit-based browsers will ignore this. */
+        width: -webkit-fill-available;  /* Mozilla-based browsers will ignore this. */
+        width: fill-available;
+    }
+    
+    button {
+        margin: 5px 0;
+
+        &[mat-button]{
+            width: auto;
+        }
+    }
+
+    .aligned-to-right {
+        text-align: right;
+        width: 100%;
+    }
+}
+
+h1 {
+    color: white;
 }
