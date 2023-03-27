@@ -2,10 +2,16 @@
 // `ng build` replaces `environment.ts` with `environment.prod.ts`.
 // The list of file replacements can be found in `angular.json`.
 
-import { defaultEnvironment } from './environment default';
-
-export const environment = {
-  ...defaultEnvironment,
+export const defaultEnvironment = {
+  firebase: {
+    apiKey: 'AIzaSyC9jLoHNAMIU8QqddudXLgNoaOtY9oY4VE',
+    authDomain: 'expense-controll.firebaseapp.com',
+    projectId: 'expense-controll',
+    storageBucket: 'expense-controll.appspot.com',
+    messagingSenderId: '375846099360',
+    appId: '1:375846099360:web:c27849a8c5317c4a482cc5',
+  },
+  production: false,
 };
 
 /*

@@ -1,16 +1,19 @@
 <main>
-  <form class="example-form">
+  <form [formGroup]="form">
     <h1>Enter with your account</h1>
     <mat-form-field class="example-full-width">
       <mat-label>Email</mat-label>
-      <input type="email" matInput placeholder="Ex. pat@example.com">
+      <input type="email" matInput placeholder="Ex. pat@example.com" formControlName="email">
     </mat-form-field>
     <mat-form-field class="example-full-width">
         <mat-label>Password</mat-label>
-        <input type="password" matInput placeholder="password">
+        <input type="password" matInput placeholder="password" formControlName="password">
       </mat-form-field>
       <div class="aligned-to-right">
-        <button mat-button>Recorery Password</button>
+        <button mat-button color="primary"
+          [disabled]="!form.get('email').valid" 
+        
+        test-id="recover-password-button">Recorery Password</button>
       </div>
       <button mat-raised-button color="primary">Login</button>
       <button mat-stroked-button color="primary">Register</button>
