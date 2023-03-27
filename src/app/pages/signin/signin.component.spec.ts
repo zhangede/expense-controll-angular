@@ -26,4 +26,13 @@ describe('SigninComponent', () => {
       page.querySelector('[test-id="recover-password-button"]').disabled
     ).toBeTruthy();
   });
+
+  describe('Login flow', () => {
+    it('given user clicks on login button , the show login loader', () => {});
+  });
+
+  function setEmail(value: string) {
+    component.form.get('email')?.setValue(value);
+    fixture.detectChanges();
+  }
 });

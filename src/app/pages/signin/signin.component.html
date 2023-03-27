@@ -11,11 +11,13 @@
       </mat-form-field>
       <div class="aligned-to-right">
         <button mat-button color="primary"
-          [disabled]="!form.get('email').valid" 
+         
         
         test-id="recover-password-button">Recorery Password</button>
       </div>
-      <button mat-raised-button color="primary">Login</button>
+      <button mat-raised-button color="primary"
+      *ngIf="!isLoggingIn"
+      (click)="onLoginClick()">Login</button>
       <button mat-stroked-button color="primary">Register</button>
 
   </form>
